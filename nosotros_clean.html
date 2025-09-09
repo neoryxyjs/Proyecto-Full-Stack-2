@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinilos Store - Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-music me-2"></i>Vinilos Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item" id="userMenu" style="display: none;">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user me-1"></i><span id="userName">Usuario</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showUserInfo()">
+                                    <i class="fas fa-info-circle me-2"></i>Mi Perfil
+                                </a></li>
+                                <li><a class="dropdown-item" href="#" onclick="logout()">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section bg-primary text-white py-5" style="margin-top: 76px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Sobre Nosotros</h1>
+                    <p class="lead">Conoce la historia detrás de Vinilos Store y nuestra pasión por la música.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-4">Nuestra Historia</h2>
+                        <p class="lead text-muted">Desde 2010, hemos sido apasionados coleccionistas y amantes de la música, dedicados a compartir la magia del vinilo con el mundo.</p>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-heart fa-lg"></i>
+                                    </div>
+                                    <h5 class="card-title">Nuestra Pasión</h5>
+                                    <p class="card-text text-muted">Cada vinilo en nuestra tienda ha sido cuidadosamente seleccionado por su calidad musical y valor artístico.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-star fa-lg"></i>
+                                    </div>
+                                    <h5 class="card-title">Calidad Garantizada</h5>
+                                    <p class="card-text text-muted">Trabajamos solo con los mejores proveedores para garantizar la máxima calidad en cada producto.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-users fa-lg"></i>
+                                    </div>
+                                    <h5 class="card-title">Comunidad</h5>
+                                    <p class="card-text text-muted">Hemos construido una comunidad de amantes de la música que comparten nuestra pasión por el vinilo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-shipping-fast fa-lg"></i>
+                                    </div>
+                                    <h5 class="card-title">Envío Seguro</h5>
+                                    <p class="card-text text-muted">Cada vinilo se envía con el máximo cuidado para llegar en perfectas condiciones a tu hogar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-light rounded-3 p-5 mb-5">
+                        <h3 class="fw-bold mb-4 text-center">Nuestra Misión</h3>
+                        <p class="text-muted text-center mb-4">Creemos que la música es una experiencia que debe vivirse de la manera más auténtica posible. Por eso, nos dedicamos a ofrecer los mejores vinilos, desde clásicos atemporales hasta los últimos lanzamientos, siempre con la máxima calidad y el mejor servicio.</p>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <h4 class="text-primary fw-bold">1000+</h4>
+                                <p class="text-muted">Vinilos Disponibles</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4 class="text-primary fw-bold">5000+</h4>
+                                <p class="text-muted">Clientes Satisfechos</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4 class="text-primary fw-bold">14</h4>
+                                <p class="text-muted">Años de Experiencia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="fw-bold mb-4">¿Por qué elegir Vinilos Store?</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <i class="fas fa-check-circle text-success fa-2x mb-3"></i>
+                                    <h6 class="fw-bold">Autenticidad</h6>
+                                    <p class="text-muted small">Solo productos originales y auténticos</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <i class="fas fa-shield-alt text-success fa-2x mb-3"></i>
+                                    <h6 class="fw-bold">Garantía</h6>
+                                    <p class="text-muted small">Garantía de satisfacción del 100%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <i class="fas fa-headphones text-success fa-2x mb-3"></i>
+                                    <h6 class="fw-bold">Asesoramiento</h6>
+                                    <p class="text-muted small">Expertos en música para ayudarte</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-music me-2"></i>Vinilos Store
+                    </h5>
+                    <p class="text-muted">Tu tienda de confianza para los mejores vinilos. Calidad, autenticidad y pasión por la música.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted text-decoration-none">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-muted text-decoration-none">Nosotros</a></li>
+                        <li><a href="login.html" class="text-muted text-decoration-none">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Categorías</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Rock</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Jazz</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Blues</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Clásica</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contacto</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Calle Principal</li>
+                        <li><i class="fas fa-phone me-2"></i>+1 234 567 8900</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@vinilosstore.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2024 Vinilos Store. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Política de Privacidad</a>
+                    <a href="#" class="text-muted text-decoration-none">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
