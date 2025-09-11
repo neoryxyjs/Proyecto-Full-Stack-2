@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinilos Store - Swimming - Mac Miller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-music me-2"></i>Vinilos Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item" id="userMenu" style="display: none;">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user me-1"></i><span id="userName">Usuario</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="showUserInfo()">
+                                    <i class="fas fa-info-circle me-2"></i>Mi Perfil
+                                </a></li>
+                                <li><a class="dropdown-item" href="#" onclick="logout()">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-detail-section py-5" style="margin-top: 76px;">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#productos">Productos</a></li>
+                    <li class="breadcrumb-item"><a href="#">Hip Hop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Swimming</li>
+                </ol>
+            </nav>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="product-image-container mb-4">
+                        <div class="main-image mb-4 text-center">
+                            <img src="images/swimming.jpg" alt="Swimming" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <h1 class="display-5 fw-bold mb-3">Swimming</h1>
+                        <p class="text-muted lead mb-3">Mac Miller</p>
+                        
+                        <div class="rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-2">(24 reseñas)</span>
+                        </div>
+                        
+                        <div class="price-section mb-4">
+                            <span class="h2 text-primary fw-bold">$39.99</span>
+                            <span class="text-muted text-decoration-line-through ms-2">$49.99</span>
+                            <span class="badge bg-danger ms-2">20% OFF</span>
+                        </div>
+                        
+                        <p class="mb-4">El quinto y penúltimo álbum de estudio de Mac Miller, "Swimming" representa una introspección profunda y conmovedora. Publicado en 2018, este trabajo muestra la evolución artística del rapero con un sonido más jazzístico y soul.</p>
+                        
+                        <div class="product-meta mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Género:</strong> Hip Hop, Jazz Rap</p>
+                                    <p><strong>Año:</strong> 2018</p>
+                                    <p><strong>Sello:</strong> Warner Records</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Formato:</strong> Vinilo, 2LP</p>
+                                    <p><strong>Condición:</strong> Nuevo</p>
+                                    <p><strong>Disponibilidad:</strong> En stock</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-4">
+                                <label for="quantity" class="form-label fw-bold">Cantidad:</label>
+                                <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+                            </div>
+                            <button class="btn btn-primary btn-lg flex-grow-1" onclick="addToCartDetail()">
+                                <i class="fas fa-shopping-cart me-2"></i>Añadir al Carrito
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-heart me-2"></i>Agregar a Favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Descripción</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tracklist-tab" data-bs-toggle="tab" data-bs-target="#tracklist" type="button" role="tab">Lista de Temas</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reseñas</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content p-4 border border-top-0 rounded-bottom" id="productTabsContent">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel">
+                            <h4 class="mb-3">Acerca de este álbum</h4>
+                            <p>"Swimming" es un viaje introspectivo a través de la mente de Mac Miller durante un periodo de transición y reflexión. El álbum fusiona elementos de hip hop, jazz y soul, creando una atmósfera íntima y melancólica.</p>
+                            <p>Grabado después de su ruptura con Ariana Grande y antes de su trágico fallecimiento, el álbum muestra a un Miller más maduro, lidiando con temas de amor perdido, crecimiento personal y la búsqueda de la paz interior.</p>
+                            <p>El vinilo incluye 13 pistas distribuidas en 2 discos, con una calidad de sonido excepcional que realza los matices instrumentales y las capas vocales.</p>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="tracklist" role="tabpanel">
+                            <h4 class="mb-3">Lista de Temas</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Lado A</p>
+                                    <ol>
+                                        <li>Come Back to Earth (2:41)</li>
+                                        <li>Hurt Feelings (4:05)</li>
+                                        <li>What's the Use? (4:48)</li>
+                                        <li>Perfecto (3:35)</li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Lado B</p>
+                                    <ol start="5">
+                                        <li>Self Care (5:45)</li>
+                                        <li>Wings (4:10)</li>
+                                        <li>Ladders (4:47)</li>
+                                        <li>Small Worlds (4:31)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Lado C</p>
+                                    <ol start="9">
+                                        <li>Conversation Pt. 1 (3:30)</li>
+                                        <li>Dunno (3:57)</li>
+                                        <li>Jet Fuel (5:45)</li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Lado D</p>
+                                    <ol start="12">
+                                        <li>2009 (5:47)</li>
+                                        <li>So It Goes (5:12)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                            <h4 class="mb-4">Reseñas de Clientes</h4>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <span class="display-4 fw-bold text-primary">4.8</span>
+                                    <span class="text-muted">/5</span>
+                                </div>
+                                <div>
+                                    <div class="rating mb-1">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="text-muted mb-0">Basado en 24 reseñas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="review-list">
+                                <div class="review-item border-bottom pb-4 mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Carlos M.</h5>
+                                        <small class="text-muted">Hace 2 semanas</small>
+                                    </div>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">La calidad de sonido es excepcional. Se nota la diferencia con la versión digital. El empaque llegó en perfectas condiciones.</p>
+                                </div>
+                                
+                                <div class="review-item border-bottom pb-4 mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Ana L.</h5>
+                                        <small class="text-muted">Hace 1 mes</small>
+                                    </div>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="mb-0">Una obra maestra en formato vinilo. La textura y profundidad del sonido hacen justicia a la complejidad musical de este álbum.</p>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button class="btn btn-outline-primary">Ver todas las reseñas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-products mt-5">
+                <h3 class="fw-bold mb-4">Productos Relacionados</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image" id="related-product-1">
+                                <img src="images/circles.jpg" alt="Circles Album Cover" class="img-fluid" style="height: 200px; object-fit: cover; width: 100%;">
+                                <div class="product-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="location.href='vinilo2.html'">
+                                        <i class="fas fa-shopping-cart me-1"></i>Agregar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Circles</h5>
+                                <p class="card-text text-muted">Mac Miller - Hip Hop</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary mb-0">$42.99</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image" id="related-product-2">
+                                <img src="images/the-divine-feminine.jpg" alt="The Divine Feminine Album Cover" class="img-fluid" style="height: 200px; object-fit: cover; width: 100%;">
+                                <div class="product-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="location.href='vinilo3.html'">
+                                        <i class="fas fa-shopping-cart me-1"></i>Agregar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">The Divine Feminine</h5>
+                                <p class="card-text text-muted">Mac Miller - Hip Hop</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary mb-0">$38.99</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <div class="product-image" id="related-product-3">
+                                <img src="images/go_od_am.jpg" alt="Good News Album Cover" class="img-fluid" style="height: 200px; object-fit: cover; width: 100%;">
+                                <div class="product-overlay">
+                                    <button class="btn btn-light btn-sm" onclick="location.href='vinilo4.html'">
+                                        <i class="fas fa-shopping-cart me-1"></i>Agregar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">GO:OD AM (X) 2LP</h5>
+                                <p class="card-text text-muted">Mac Miller - Hip Hop</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary mb-0">$41.99</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-music me-2"></i>Vinilos Store
+                    </h5>
+                    <p class="text-muted">Tu tienda de confianza para los mejores vinilos. Calidad, autenticidad y pasión por la música.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted text-decoration-none">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-muted text-decoration-none">Nosotros</a></li>
+                        <li><a href="login.html" class="text-muted text-decoration-none">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Categorías</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Rock</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Jazz</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Blues</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Clásica</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contacto</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Calle Principal</li>
+                        <li><i class="fas fa-phone me-2"></i>+1 234 567 8900</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@vinilosstore.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2024 Vinilos Store. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Política de Privacidad</a>
+                    <a href="#" class="text-muted text-decoration-none">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Función específica para la página de detalle
+        function addToCartDetail() {
+            const productId = 1; // ID del producto actual
+            const quantity = parseInt(document.getElementById('quantity').value);
+            
+            addToCart(productId, quantity);
+            
+            // Mostrar notificación personalizada
+            showToast('¡Producto añadido al carrito!', 'success');
+        }
+    </script>
+</body>
+</html>
