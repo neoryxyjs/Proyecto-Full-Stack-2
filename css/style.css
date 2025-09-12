@@ -14,6 +14,7 @@
     --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --white-color: #fff;
 }
 
 * {
@@ -232,6 +233,7 @@ body {
 }
 
 footer {
+    color: var(--white-color) !important;
     background: var(--dark-color) !important;
 }
 
@@ -536,4 +538,8 @@ html {
 .scroll-to-top:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow);
+}
+
+.text-muted{
+    color: var(--white-color) !important;
 }
