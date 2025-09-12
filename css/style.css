@@ -543,3 +543,7 @@ html {
 .text-muted{
     color: var(--white-color) !important;
 }
+
+.text-muted-us{
+    color: black;
+}
