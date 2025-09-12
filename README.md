@@ -129,7 +129,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## Contacto
 
 - **Proyecto**: Vinilos Store
-- **Año**: 2024
+- **Año**: 2025
 - **Tecnologías**: HTML5, CSS3, JavaScript, Bootstrap 5
 
 ---
